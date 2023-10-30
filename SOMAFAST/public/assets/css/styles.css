@@ -1,0 +1,44 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 400px;
+    margin: auto;
+}
+
+.panel-heading {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
+}
+
+.panel-body {
+    padding: 20px;
+}
+
+.fa-lock {
+    color: #337ab7;
+}
+
+.btn-warning  {
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+.btn-warning :hover, .btn-warning :focus {
+    background-color: #286090;
+    border-color: #204d74;
+}
