@@ -96,50 +96,12 @@
               echo '</div>';
               echo '</div>';
               echo '</div>';
-
-
-              
             }
             echo '</div>'; // Cierra la fila después de mostrar todas las tarjetas
           } else {
             echo "No se encontraron resultados";
           }
           
-
-
-if (!$conn) {
-  die('Error de conexión: ' . mysqli_connect_error());
-}
-$usuario_id = 13;
-$consulta = "SELECT rol FROM usuarios WHERE p_Id = $usuario_id";
-$resultado = mysqli_query($conn, $consulta);
-
-if ($resultado) {
-    // Obtén el valor de 'rol' de la consulta
-    $fila = mysqli_fetch_assoc($resultado);
-    
-    // Verifica si el rol es igual a 2 y el ID es 13
-    if ($fila && $fila['rol'] == 2 && $usuario_id == 13) {
-        echo '<a href="./../../view/admin/LoginAdmin.php" class="btn btn-primary">Admin Login</a>';
-    } else {
-        echo 'No tienes permisos de administrador.';
-    }
-    
-    // Libera el resultado
-    mysqli_free_result($resultado);
-} else {
-    // Maneja el error de la consulta
-    echo 'Error en la consulta: ' . mysqli_error($conn);
-}
-
-// Cierra la conexión a la base de datos
-mysqli_close($conn);
-
-// Cierra las etiquetas div
-echo '</div>';
-echo '</div>';
-echo '</div>';
-
-
-     
+          // Cerrar la conexión
+          $conn->close();
           ?>
